@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.gallery{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+      /* for attaching divs each other without any blanck space */
+    grid-auto-flow: dense;
+  
+    
+    background-color: black;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.gallery> div > img { 
+     /* for fit image properly in div autosize  */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     
+}
+
+.gallery>div{
+    background-color: aliceblue;
+}
+ 
+
+
+.item1{  
+    grid-column: span 2;
+ 
+     
+}
+ /* all verticle images  */
+.item2{ grid-row: span 2;
+
+}
+ 
+
+ /* all big images */
+.item3{
+    grid-row: span 2;
+    grid-column: span 2;
+}
